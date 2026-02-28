@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CareerPath India — Find Your Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- ── NOISE OVERLAY ── -->
+<div class="noise"></div>
+
+<!-- ── BACKGROUND ── -->
+<div class="bg-wrap">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-lines"></div>
+</div>
+
+<!-- ── NAV ── -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a class="logo" href="/">
+            <span class="logo-mark">⬡</span>
+            <span class="logo-text">CareerPath <span class="logo-india">India</span></span>
+        </a>
+        <div class="nav-pill">Free · No Signup · Instant</div>
+    </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-tag">
+            <span class="tag-dot"></span>
+            Student Career Discovery Tool
+        </div>
+        <h1 class="hero-h1">
+            What Will You<br>
+            <em>Become?</em>
+        </h1>
+        <p class="hero-p">Tell us your skills and interests. We'll show you your best career match — with salary in ₹, what to learn, and your future scope in India.</p>
+
+        <div class="hero-cards">
+            <div class="mini-card">
+                <span class="mc-num">28+</span>
+                <span class="mc-label">Career Paths</span>
+            </div>
+            <div class="mini-card">
+                <span class="mc-num">4</span>
+                <span class="mc-label">Industries</span>
+            </div>
+            <div class="mini-card">
+                <span class="mc-num">10</span>
+                <span class="mc-label">Skill Areas</span>
+            </div>
+            <div class="mini-card">
+                <span class="mc-num">₹</span>
+                <span class="mc-label">Indian Salaries</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ── FORM ── -->
+<section class="form-section">
+    <div class="form-wrap">
+
+        <!-- Progress Bar -->
+        <div class="progress-bar-wrap">
+            <div class="progress-steps">
+                <div class="p-step active" id="ps1">
+                    <div class="p-step-dot">1</div>
+                    <span>Name</span>
+                </div>
+                <div class="p-line"></div>
+                <div class="p-step" id="ps2">
+                    <div class="p-step-dot">2</div>
+                    <span>Interest</span>
+                </div>
+                <div class="p-line"></div>
+                <div class="p-step" id="ps3">
+                    <div class="p-step-dot">3</div>
+                    <span>Skills</span>
+                </div>
+            </div>
+        </div>
+
+        <form action="/result" method="POST" id="mainForm">
+
+            <!-- ── STEP 1: NAME ── -->
+            <div class="step-block active" id="step1">
+                <div class="step-head">
+                    <div class="step-icon-wrap">👤</div>
+                    <div>
+                        <h2 class="step-title">What's your name?</h2>
+                        <p class="step-sub">Let's personalise your experience</p>
+                    </div>
+                </div>
+                <input
+                    type="text"
+                    name="name"
+                    id="nameInput"
+                    class="big-input"
+                    placeholder="Type your full name here..."
+                    autocomplete="off"
+                >
+                <button type="button" class="next-btn" onclick="goToStep(2)">
+                    Continue <span>→</span>
+                </button>
+            </div>
+
+            <!-- ── STEP 2: INTEREST ── -->
+            <div class="step-block" id="step2">
+                <div class="step-head">
+                    <div class="step-icon-wrap">🎯</div>
+                    <div>
+                        <h2 class="step-title">What excites you most?</h2>
+                        <p class="step-sub">Choose the field that pulls you in</p>
+                    </div>
+                </div>
+                <div class="interest-grid">
+
+                    <label class="i-card" id="ic-tech">
+                        <input type="radio" name="interest" value="Tech" required>
+                        <div class="i-card-inner">
+                            <div class="i-emoji">💻</div>
+                            <div class="i-name">Technology</div>
+                            <div class="i-desc">Software, AI, Cloud, Cyber</div>
+                        </div>
+                        <div class="i-check">✓</div>
+                    </label>
+
+                    <label class="i-card" id="ic-biz">
+                        <input type="radio" name="interest" value="Business">
+                        <div class="i-card-inner">
+                            <div class="i-emoji">📊</div>
+                            <div class="i-name">Business</div>
+                            <div class="i-desc">Management, Finance, Marketing</div>
+                        </div>
+                        <div class="i-check">✓</div>
+                    </label>
+
+                    <label class="i-card" id="ic-arts">
+                        <input type="radio" name="interest" value="Arts">
+                        <div class="i-card-inner">
+                            <div class="i-emoji">🎨</div>
+                            <div class="i-name">Arts & Design</div>
+                            <div class="i-desc">Creative, UX, Animation</div>
+                        </div>
+                        <div class="i-check">✓</div>
+                    </label>
+
+                    <label class="i-card" id="ic-sci">
+                        <input type="radio" name="interest" value="Science">
+                        <div class="i-card-inner">
+                            <div class="i-emoji">🔬</div>
+                            <div class="i-name">Science</div>
+                            <div class="i-desc">Research, Bio, Data</div>
+                        </div>
+                        <div class="i-check">✓</div>
+                    </label>
+
+                </div>
+                <div class="step-nav">
+                    <button type="button" class="back-btn" onclick="goToStep(1)">← Back</button>
+                    <button type="button" class="next-btn" onclick="goToStep(3)">Continue <span>→</span></button>
+                </div>
+            </div>
+
+            <!-- ── STEP 3: SKILLS ── -->
+            <div class="step-block" id="step3">
+                <div class="step-head">
+                    <div class="step-icon-wrap">⚡</div>
+                    <div>
+                        <h2 class="step-title">What are your strengths?</h2>
+                        <p class="step-sub">Select all skills you have or enjoy</p>
+                    </div>
+                </div>
+                <div class="skills-wrap">
+
+                    <label class="s-chip">
+                        <input type="checkbox" name="skills" value="Python">
+                        <div class="s-chip-inner">
+                            <span class="s-emoji">🐍</span>
+                            <span class="s-label">Python</span>
+                        </div>
+                    </label>
+
+                    <label class="s-chip">
+                        <input type="checkbox" name="skills" value="Math">
+                        <div class="s-chip-inner">
+                            <span class="s-emoji">📐</span>
+                            <span class="s-label">Math</span>
+                        </div>
+                    </label>
+
+                    <label class="s-chip">
+                        <input type="checkbox" name="skills" value="Communication">
+                        <div class="s-chip-inner">
+                            <span class="s-emoji">💬</span>
+                            <span class="s-label">Communication</span>
+                        </div>
+                    </label>
+
+                    <label class="s-chip">
+                        <input type="checkbox" name="skills" value="Drawing">
+                        <div class="s-chip-inner">
+                            <span class="s-emoji">🎨</span>
+                            <span class="s-label">Drawing</span>
+                        </div>
+                    </label>
+
+                    <label class="s-chip">
+                        <input type="checkbox" name="skills" value="Leadership">
+                        <div class="s-chip-inner">
+                            <span class="s-emoji">🚀</span>
+                            <span class="s-label">Leadership</span>
+                        </div>
+                    </label>
+
+                    <label class="s-chip">
+                        <input type="checkbox" name="skills" value="Analysis">
+                        <div class="s-chip-inner">
+                            <span class="s-emoji">🔍</span>
+                            <span class="s-label">Analysis</span>
+                        </div>
+                    </label>
+
+                    <label class="s-chip">
+                        <input type="checkbox" name="skills" value="Creativity">
+                        <div class="s-chip-inner">
+                            <span class="s-emoji">💡</span>
+                            <span class="s-label">Creativity</span>
+                        </div>
+                    </label>
+
+                    <label class="s-chip">
+                        <input type="checkbox" name="skills" value="Writing">
+                        <div class="s-chip-inner">
+                            <span class="s-emoji">✍️</span>
+                            <span class="s-label">Writing</span>
+                        </div>
+                    </label>
+
+                    <label class="s-chip">
+                        <input type="checkbox" name="skills" value="Biology">
+                        <div class="s-chip-inner">
+                            <span class="s-emoji">🧬</span>
+                            <span class="s-label">Biology</span>
+                        </div>
+                    </label>
+
+                    <label class="s-chip">
+                        <input type="checkbox" name="skills" value="Design">
+                        <div class="s-chip-inner">
+                            <span class="s-emoji">🖌️</span>
+                            <span class="s-label">Design</span>
+                        </div>
+                    </label>
+
+                </div>
+
+                <div class="step-nav">
+                    <button type="button" class="back-btn" onclick="goToStep(2)">← Back</button>
+                    <button type="submit" class="submit-btn">
+                        <span class="submit-text">Reveal My Career</span>
+                        <span class="submit-icon">✦</span>
+                    </button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer class="footer">
+    <p>CareerPath India · Built for students · Free forever</p>
+</footer>
+
+<script>
+function goToStep(num) {
+    // Validate step 1
+    if (num === 2) {
+        const name = document.getElementById('nameInput').value.trim();
+        if (!name) {
+            document.getElementById('nameInput').classList.add('input-error');
+            document.getElementById('nameInput').placeholder = '⚠️ Please enter your name first!';
+            return;
+        }
+        document.getElementById('nameInput').classList.remove('input-error');
+    }
+
+    // Validate step 2
+    if (num === 3) {
+        const interest = document.querySelector('input[name="interest"]:checked');
+        if (!interest) {
+            document.querySelectorAll('.i-card').forEach(c => c.classList.add('shake'));
+            setTimeout(() => document.querySelectorAll('.i-card').forEach(c => c.classList.remove('shake')), 500);
+            return;
+        }
+    }
+
+    // Hide all steps
+    document.querySelectorAll('.step-block').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.p-step').forEach(s => s.classList.remove('active', 'done'));
+
+    // Show current step
+    document.getElementById('step' + num).classList.add('active');
+
+    // Update progress
+    for (let i = 1; i <= 3; i++) {
+        const ps = document.getElementById('ps' + i);
+        if (i < num) ps.classList.add('done');
+        if (i === num) ps.classList.add('active');
+    }
+
+    // Scroll to form
+    document.querySelector('.form-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Highlight interest cards on select
+document.querySelectorAll('.i-card input').forEach(radio => {
+    radio.addEventListener('change', function() {
+        document.querySelectorAll('.i-card').forEach(c => c.classList.remove('selected'));
+        this.closest('.i-card').classList.add('selected');
+    });
+});
+
+// Highlight skill chips on select
+document.querySelectorAll('.s-chip input').forEach(cb => {
+    cb.addEventListener('change', function() {
+        if (this.checked) {
+            this.closest('.s-chip').classList.add('selected');
+        } else {
+            this.closest('.s-chip').classList.remove('selected');
+        }
+    });
+});
+</script>
+
+</body>
+</html>

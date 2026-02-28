@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Career Result — CareerPath India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabinet+Grotesk:wght@400;500;700;800;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="noise"></div>
+<div class="bg-wrap">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-lines"></div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a class="logo" href="/">
+            <span class="logo-mark">⬡</span>
+            <span class="logo-text">CareerPath <span class="logo-india">India</span></span>
+        </a>
+        <a href="/" class="nav-pill nav-pill-link">← Try Again</a>
+    </div>
+</nav>
+
+<!-- RESULT PAGE -->
+<main class="result-main">
+
+    <!-- Greeting Banner -->
+    <div class="r-greeting fade-up">
+        <div class="r-greeting-inner">
+            <span class="r-wave">👋</span>
+            <div>
+                <h2 class="r-hello">Hey <strong>{{ name }}</strong>,</h2>
+                <p class="r-sub">Based on your interest in <strong>{{ interest }}</strong> — here's your perfect career match</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CAREER CARD -->
+    <div class="r-main-card fade-up delay-1">
+
+        <!-- Top bar -->
+        <div class="rmc-topbar">
+            <div class="rmc-match-badge">
+                <span class="badge-dot"></span>
+                Top Career Match
+            </div>
+            <div class="rmc-field-tag">{{ career_info.field }}</div>
+        </div>
+
+        <!-- Career Identity -->
+        <div class="rmc-identity">
+            <div class="rmc-emoji">{{ career_info.icon }}</div>
+            <div class="rmc-title-wrap">
+                <h1 class="rmc-title">{{ career }}</h1>
+                <p class="rmc-desc">{{ career_info.description }}</p>
+            </div>
+        </div>
+
+        <!-- Salary Strip -->
+        <div class="salary-strip">
+            <div class="ss-left">
+                <div class="ss-label">💰 Average Salary in India</div>
+                <div class="ss-amount">{{ career_info.salary }}</div>
+            </div>
+            <div class="ss-right">
+                <div class="ss-tag">Per Year</div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- TWO COLUMN SECTION -->
+    <div class="r-two-col fade-up delay-2">
+
+        <!-- What to Learn -->
+        <div class="r-panel learn-panel">
+            <div class="panel-header">
+                <div class="panel-icon">📚</div>
+                <div>
+                    <h3 class="panel-title">What to Learn Next</h3>
+                    <p class="panel-sub">Build these skills for a stronger future</p>
+                </div>
+            </div>
+            <ul class="learn-list">
+                {% for item in career_info.learn %}
+                <li class="learn-item">
+                    <div class="learn-num">{{ loop.index }}</div>
+                    <span>{{ item }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Future Scope -->
+        <div class="r-panel scope-panel">
+            <div class="panel-header">
+                <div class="panel-icon">🚀</div>
+                <div>
+                    <h3 class="panel-title">Future Scope in India</h3>
+                    <p class="panel-sub">Job market & growth outlook</p>
+                </div>
+            </div>
+            <p class="scope-body">{{ career_info.scope }}</p>
+
+            <!-- Scope meter -->
+            <div class="scope-meter">
+                <div class="meter-label">Demand Level</div>
+                <div class="meter-bar">
+                    <div class="meter-fill"></div>
+                </div>
+                <div class="meter-tags">
+                    <span>Low</span><span>Medium</span><span>High</span><span>Very High</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Profile Summary -->
+    <div class="r-summary fade-up delay-3">
+        <h3 class="summary-heading">Your Profile</h3>
+        <div class="summary-pills">
+            <div class="sum-item">
+                <span class="sum-label">🎯 Interest</span>
+                <span class="sum-val">{{ interest }}</span>
+            </div>
+            <div class="sum-divider"></div>
+            <div class="sum-item">
+                <span class="sum-label">⚡ Skills</span>
+                <span class="sum-val">
+                    {% if skills %}
+                        {{ skills | join("  ·  ") }}
+                    {% else %}
+                        None selected
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pro Tip -->
+    <div class="r-tip fade-up delay-4">
+        <div class="tip-left">💡</div>
+        <div class="tip-right">
+            <strong>Pro Tip for You:</strong> Start with free resources — YouTube, NPTEL, Coursera India, and Khan Academy. Build 2-3 small projects, push them to GitHub, then apply for internships. Consistency beats talent every single time. You've got this! 🔥
+        </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="r-actions fade-up delay-4">
+        <a href="/" class="r-btn-solid">← Try Again</a>
+        <a href="/" class="r-btn-ghost">Explore Other Careers</a>
+    </div>
+
+</main>
+
+<footer class="footer">
+    <p>CareerPath India · Built for students · Free forever</p>
+</footer>
+
+</body>
+</html>
