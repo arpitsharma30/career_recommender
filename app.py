@@ -16,7 +16,7 @@ CAREER_DATA = {
     # ── TECH ────────────────────────────────────────────────
     "Data Scientist": {
         "description": "Analyze large datasets to find patterns and help companies make smart decisions using Python and statistics.",
-        "salary": "₹6,00,000 – ₹18,00,000/yr",
+        "salary": "Rs5,00,000 - Rs20,00,000/yr | Avg Rs11 LPA (AmbitionBox 2025)",
         "icon": "📊",
         "field": "Tech",
         "learn": [
@@ -30,7 +30,7 @@ CAREER_DATA = {
     },
     "Software Developer": {
         "description": "Build websites, apps, and software products. You write code to solve real-world problems.",
-        "salary": "₹4,00,000 – ₹15,00,000/yr",
+        "salary": "Rs4,00,000 - Rs20,00,000/yr | Fresher Rs6-8 LPA, Mid Rs12-18 LPA (Glassdoor 2026)",
         "icon": "💻",
         "field": "Tech",
         "learn": [
@@ -44,7 +44,7 @@ CAREER_DATA = {
     },
     "AI/ML Engineer": {
         "description": "Design and train machine learning models and intelligent systems that can learn from data.",
-        "salary": "₹8,00,000 – ₹25,00,000/yr",
+        "salary": "Rs5,00,000 - Rs35,00,000/yr | Avg Rs15.2 LPA (AmbitionBox 2025)",
         "icon": "🤖",
         "field": "Tech",
         "learn": [
@@ -58,7 +58,7 @@ CAREER_DATA = {
     },
     "Cybersecurity Analyst": {
         "description": "Protect computer systems and networks from hackers and digital threats.",
-        "salary": "₹5,00,000 – ₹16,00,000/yr",
+        "salary": "Rs4,20,000 - Rs18,00,000/yr | Certified CEH/CISSP: Rs8-18 LPA (WorkStaff360 2025)",
         "icon": "🔐",
         "field": "Tech",
         "learn": [
@@ -72,7 +72,7 @@ CAREER_DATA = {
     },
     "Cloud Engineer": {
         "description": "Build and manage cloud infrastructure on platforms like AWS, Azure, and Google Cloud.",
-        "salary": "₹6,00,000 – ₹18,00,000/yr",
+        "salary": "Rs5,50,000 - Rs22,00,000/yr | AWS certified earn 20-30% more (Glassdoor 2025)",
         "icon": "☁️",
         "field": "Tech",
         "learn": [
@@ -86,7 +86,7 @@ CAREER_DATA = {
     },
     "Systems Analyst": {
         "description": "Study how organizations use technology and recommend improvements to business systems.",
-        "salary": "₹4,50,000 – ₹10,00,000/yr",
+        "salary": "Rs4,00,000 - Rs12,00,000/yr | Avg Rs6.5 LPA (AmbitionBox 2025)",
         "icon": "🖥️",
         "field": "Tech",
         "learn": [
@@ -100,7 +100,7 @@ CAREER_DATA = {
     },
     "IT Support Specialist": {
         "description": "Help people and organizations resolve technical issues with computers and software.",
-        "salary": "₹2,50,000 – ₹6,00,000/yr",
+        "salary": "Rs2,50,000 - Rs7,50,000/yr  | Entry Rs35k-70k/month (WorkStaff360 2025)",
         "icon": "🛠️",
         "field": "Tech",
         "learn": [
@@ -116,7 +116,7 @@ CAREER_DATA = {
     # ── BUSINESS ────────────────────────────────────────────
     "Business Manager": {
         "description": "Lead teams and oversee business operations to achieve company goals.",
-        "salary": "₹6,00,000 – ₹18,00,000/yr",
+        "salary": "Rs6,00,000 - Rs24,00,000/yr | MBA holders avg Rs12 LPA (AmbitionBox 2025)",
         "icon": "🏢",
         "field": "Business",
         "learn": [
@@ -130,7 +130,7 @@ CAREER_DATA = {
     },
     "Project Manager": {
         "description": "Plan, execute, and close projects while managing teams, budgets, and timelines.",
-        "salary": "₹5,00,000 – ₹15,00,000/yr",
+        "salary": "Rs6,00,000 - Rs22,00,000/yr | PMP certified earn 40% more (PMI India)",
         "icon": "📋",
         "field": "Business",
         "learn": [
@@ -144,7 +144,7 @@ CAREER_DATA = {
     },
     "Marketing Specialist": {
         "description": "Create campaigns and strategies to promote products and grow a brand's audience.",
-        "salary": "₹3,00,000 – ₹10,00,000/yr",
+        "salary": "Rs3,30,000 - Rs20,00,000/yr | Digital marketing range (upGrad 2026)",
         "icon": "📣",
         "field": "Business",
         "learn": [
@@ -158,7 +158,7 @@ CAREER_DATA = {
     },
     "Entrepreneur": {
         "description": "Start and build your own business or startup, turning ideas into real products and services.",
-        "salary": "₹0 – Unlimited potential",
+        "salary": "Rs0 to No Ceiling | India has 100+ unicorns",
         "icon": "🚀",
         "field": "Business",
         "learn": [
@@ -172,7 +172,7 @@ CAREER_DATA = {
     },
     "Financial Analyst": {
         "description": "Evaluate financial data to guide investment decisions and business strategy.",
-        "salary": "₹4,00,000 – ₹12,00,000/yr",
+        "salary": "Rs4,50,000 - Rs16,00,000/yr | CFA certified avg Rs12-20 LPA (AmbitionBox)",
         "icon": "💹",
         "field": "Business",
         "learn": [
@@ -186,7 +186,7 @@ CAREER_DATA = {
     },
     "HR Manager": {
         "description": "Manage recruitment, employee relations, and workplace culture in an organization.",
-        "salary": "₹4,00,000 – ₹12,00,000/yr",
+        "salary": "Rs4,00,000 - Rs15,00,000/yr | CHRO roles up to Rs40 LPA (Glassdoor 2025)",
         "icon": "🤝",
         "field": "Business",
         "learn": [
@@ -200,7 +200,7 @@ CAREER_DATA = {
     },
     "Business Analyst": {
         "description": "Bridge the gap between business needs and technology solutions through data and process analysis.",
-        "salary": "₹4,50,000 – ₹12,00,000/yr",
+        "salary": "Rs4,50,000 - Rs14,00,000/yr | Avg Rs6.5 LPA (AmbitionBox 2025)",
         "icon": "📈",
         "field": "Business",
         "learn": [
@@ -216,7 +216,7 @@ CAREER_DATA = {
     # ── ARTS ────────────────────────────────────────────────
     "Creative Director": {
         "description": "Lead the visual and creative vision for brands, agencies, or media companies.",
-        "salary": "₹8,00,000 – ₹25,00,000/yr",
+        "salary": "Rs8,00,000 - Rs32,00,000/yr | Top agency CDs Rs25-40 LPA (Glassdoor 2025)",
         "icon": "🎭",
         "field": "Arts",
         "learn": [
@@ -230,7 +230,7 @@ CAREER_DATA = {
     },
     "UX/UI Designer": {
         "description": "Design beautiful and user-friendly digital interfaces for apps and websites.",
-        "salary": "₹4,00,000 – ₹15,00,000/yr",
+        "salary": "Rs4,80,000 - Rs21,50,000/yr | Avg Rs7 LPA, top Rs13.7 LPA (AmbitionBox 2025)",
         "icon": "🎨",
         "field": "Arts",
         "learn": [
@@ -244,7 +244,7 @@ CAREER_DATA = {
     },
     "Graphic Designer": {
         "description": "Create visual content — logos, posters, branding — for businesses and media.",
-        "salary": "₹2,50,000 – ₹8,00,000/yr",
+        "salary": "Rs2,50,000 - Rs9,00,000/yr  | Freelancers earn Rs1-3L/month on Fiverr",
         "icon": "✏️",
         "field": "Arts",
         "learn": [
@@ -258,7 +258,7 @@ CAREER_DATA = {
     },
     "Content Writer": {
         "description": "Write blogs, articles, scripts, and copy that informs, entertains, and converts readers.",
-        "salary": "₹2,50,000 – ₹8,00,000/yr",
+        "salary": "Rs2,50,000 - Rs10,00,000/yr | Strategists Rs4.3-21 LPA (upGrad 2026)",
         "icon": "📝",
         "field": "Arts",
         "learn": [
@@ -272,7 +272,7 @@ CAREER_DATA = {
     },
     "Animator": {
         "description": "Bring characters and stories to life using 2D or 3D animation for film, games, or media.",
-        "salary": "₹3,00,000 – ₹10,00,000/yr",
+        "salary": "Rs3,00,000 - Rs12,00,000/yr | OTT/Bollywood animators Rs8-12 LPA",
         "icon": "🎬",
         "field": "Arts",
         "learn": [
@@ -286,7 +286,7 @@ CAREER_DATA = {
     },
     "Art Director": {
         "description": "Oversee the visual style of magazines, ads, film productions, and product packaging.",
-        "salary": "₹5,00,000 – ₹14,00,000/yr",
+        "salary": "Rs5,50,000 - Rs18,00,000/yr | Mumbai/Delhi ad agencies Rs12-18 LPA",
         "icon": "🖼️",
         "field": "Arts",
         "learn": [
@@ -300,7 +300,7 @@ CAREER_DATA = {
     },
     "Art Teacher": {
         "description": "Inspire and educate students in visual arts, drawing, painting, and design.",
-        "salary": "₹2,00,000 – ₹6,00,000/yr",
+        "salary": "Rs2,00,000 - Rs8,00,000/yr  | Online tutors on Unacademy earn Rs4-8 LPA",
         "icon": "🏫",
         "field": "Arts",
         "learn": [
@@ -316,7 +316,7 @@ CAREER_DATA = {
     # ── SCIENCE ─────────────────────────────────────────────
     "Research Scientist": {
         "description": "Conduct experiments and publish findings to advance human knowledge in your field.",
-        "salary": "₹5,00,000 – ₹15,00,000/yr",
+        "salary": "Rs5,60,000 - Rs18,00,000/yr | ISRO/DRDO start Rs56,100/month (Govt scale)",
         "icon": "🔬",
         "field": "Science",
         "learn": [
@@ -330,7 +330,7 @@ CAREER_DATA = {
     },
     "Biomedical Engineer": {
         "description": "Combine engineering and biology to design medical devices, prosthetics, and healthcare solutions.",
-        "salary": "₹4,00,000 – ₹12,00,000/yr",
+        "salary": "Rs3,50,000 - Rs12,00,000/yr | Siemens/Philips India Rs8-12 LPA mid-level",
         "icon": "🧬",
         "field": "Science",
         "learn": [
@@ -344,7 +344,7 @@ CAREER_DATA = {
     },
     "Data Analyst (Science)": {
         "description": "Use mathematical and statistical tools to interpret scientific data and drive discoveries.",
-        "salary": "₹4,00,000 – ₹10,00,000/yr",
+        "salary": "Rs4,00,000 - Rs12,00,000/yr | Fresher Rs6-8 LPA, 3yr exp Rs12 LPA",
         "icon": "🧮",
         "field": "Science",
         "learn": [
@@ -358,7 +358,7 @@ CAREER_DATA = {
     },
     "Environmental Scientist": {
         "description": "Study the environment and develop solutions to protect ecosystems and address climate change.",
-        "salary": "₹3,00,000 – ₹9,00,000/yr",
+        "salary": "Rs3,00,000 - Rs10,00,000/yr | ESG consultants earn Rs8-12 LPA corporate",
         "icon": "🌍",
         "field": "Science",
         "learn": [
@@ -372,7 +372,7 @@ CAREER_DATA = {
     },
     "Bioinformatics Analyst": {
         "description": "Use programming and statistics to analyze biological data like DNA sequences.",
-        "salary": "₹4,00,000 – ₹12,00,000/yr",
+        "salary": "Rs4,00,000 - Rs14,00,000/yr | Biocon/Dr Reddys Rs8-14 LPA experienced",
         "icon": "🧪",
         "field": "Science",
         "learn": [
@@ -386,7 +386,7 @@ CAREER_DATA = {
     },
     "Mathematician": {
         "description": "Solve abstract and applied problems using advanced mathematics in academia or industry.",
-        "salary": "₹4,00,000 – ₹12,00,000/yr",
+        "salary": "Rs4,50,000 - Rs16,00,000/yr | Actuaries Rs8-20 LPA (IAI India 2025)",
         "icon": "📐",
         "field": "Science",
         "learn": [
@@ -400,7 +400,7 @@ CAREER_DATA = {
     },
     "Lab Technician": {
         "description": "Perform experiments and tests in a laboratory to support scientific research.",
-        "salary": "₹1,80,000 – ₹5,00,000/yr",
+        "salary": "Rs1,80,000 - Rs5,50,000/yr  | Dr Lal/SRL Rs2.5-5.5 LPA, Govt labs higher",
         "icon": "⚗️",
         "field": "Science",
         "learn": [
@@ -536,13 +536,25 @@ def result():
         "scope": "Great potential with the right skills and dedication."
     })
 
+    # Split salary into amount and source note
+    raw_salary = career_info.get("salary", "")
+    if " | " in raw_salary:
+        parts = raw_salary.split(" | ", 1)
+        salary_amount = parts[0].replace("Rs", "₹")
+        salary_source = parts[1]
+    else:
+        salary_amount = raw_salary.replace("Rs", "₹")
+        salary_source = ""
+
     return render_template(
         "result.html",
         name=name,
         skills=skills,
         interest=interest,
         career=career_key,
-        career_info=career_info
+        career_info=career_info,
+        salary_amount=salary_amount,
+        salary_source=salary_source
     )
 
 
