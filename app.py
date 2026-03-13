@@ -1,11 +1,11 @@
 # ============================================================
 # app.py — Career Recommender (Indian Edition)
 # ============================================================
-
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 CAREER_DATA = {
 
     # ── TECH ────────────────────────────────────────────────
@@ -515,24 +515,31 @@ def index():
     return render_template("index.html")
 
 
+# HTML form submission route
 @app.route("/result", methods=["POST"])
 def result():
-    name     = request.form.get("name", "Student")
-    skills   = request.form.getlist("skills")
+
+    name = request.form.get("name", "Student")
+    skills = request.form.getlist("skills")
     interest = request.form.get("interest", "")
 
-    career_key  = recommend_career(skills, interest)
+    career_key = recommend_career(skills, interest)
+
     career_info = CAREER_DATA.get(career_key, {
         "description": "An exciting career that matches your profile.",
         "salary": "Varies",
         "icon": "🌟",
         "field": interest,
-        "learn": ["Research this field online", "Talk to professionals", "Take online courses"],
+        "learn": [
+            "Research this field online",
+            "Talk to professionals",
+            "Take online courses"
+        ],
         "scope": "Great potential with the right skills and dedication."
     })
 
-    # Split salary into amount and source note
     raw_salary = career_info.get("salary", "")
+
     if " | " in raw_salary:
         parts = raw_salary.split(" | ", 1)
         salary_amount = parts[0].replace("Rs", "₹")
@@ -551,6 +558,42 @@ def result():
         salary_amount=salary_amount,
         salary_source=salary_source
     )
+
+
+# API route for React / JSON
+@app.route("/recommend", methods=["POST"])
+def recommend():
+
+    data = request.get_json()
+
+    name = data.get("name", "Student")
+    skills = data.get("skills", [])
+    interest = data.get("interest", "")
+
+    career_key = recommend_career(skills, interest)
+    career_info = CAREER_DATA.get(career_key, {})
+
+    raw_salary = career_info.get("salary", "")
+
+    if " | " in raw_salary:
+        parts = raw_salary.split(" | ", 1)
+        salary_amount = parts[0].replace("Rs", "₹")
+        salary_source = parts[1]
+    else:
+        salary_amount = raw_salary.replace("Rs", "₹")
+        salary_source = ""
+
+    return jsonify({
+        "name": name,
+        "career": career_key,
+        "description": career_info.get("description", ""),
+        "salary": salary_amount,
+        "salary_source": salary_source,
+        "icon": career_info.get("icon", "🌟"),
+        "field": career_info.get("field", ""),
+        "learn": career_info.get("learn", []),
+        "scope": career_info.get("scope", "")
+    })
 
 
 if __name__ == "__main__":
